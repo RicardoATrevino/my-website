@@ -27,7 +27,7 @@ export default function Sidebar() {
             </li>
             <li>
               {" "}
-              <a href="/MyProjects/index" className="block px-4 py-2 hover:bg-gray-700">
+              <a href="/MyProjects/intro" className="block px-4 py-2 hover:bg-gray-700">
                 {" "}
                 Introduction{" "}
               </a>

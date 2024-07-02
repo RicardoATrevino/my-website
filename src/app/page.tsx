@@ -16,7 +16,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
         <nav className='text-center text-wrap hover:bg-gray-700' >
           <ul>
             <li > 
-              <a href='/MyProjects/index' > 
+              <a href='/MyProjects/intro' > 
                 Introduction 
               </a>
             </li>
