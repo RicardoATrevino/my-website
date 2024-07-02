@@ -10,24 +10,24 @@ const Home = () => {
   const sections = [
     {
       id: 1,
-      content: "1/5. Thank You for taking the time to check out my website! Scroll down for some more of me!",
+      content:
+        "1/4.<br><br> My name is Ricardo! I also go by Rico, I have been a professional full-stack dev for 1 year (Ruby, JS,Typescript to name a few), I was born and raised around L.A.",
     },
     {
       id: 2,
       content:
-        " 2/5. My name is Ricardo! I also go by Rico, I have been a professional programmer for 1 year, I was born and raised around L.A.",
+        " 2/4.<br><br> Growing up I never enjoyed anything even remotely close to programming but it eventually took hold of me back in 2019 when I took my first Comp Sci class, with C++ being the first language I learned .",
     },
     {
       id: 3,
       content:
-        "3/5.  Like many others I got a passion for code, but also anything electronic! I take apart whatever I can get my hands on, even if i might end up breaking it. ",
+        "3/4.<br><br>  Like many others in this field, I got a passion for code, but also anything electronic! I take apart whatever I can get my hands on, even if i might end up breaking it. example: Project 3 ",
     },
-    { id: 4, content: "4/5.  For more details on my current long standing project, check out project 3. " },
 
     {
-      id: 5,
+      id: 4,
       content:
-        "5/5. Here is my Contact info, I appreciate you taking the time to look through my website!   Phone: 818-935-9670  | Email: RicardoATrevino2307@gmail.com ",
+        "4/4.<br><br> Here is my Contact info, I appreciate you taking the time to look through my website!  <br> Phone: 818-935-9670   <br>Email: RicardoATrevino2307@gmail.com ",
     },
   ];
 
@@ -53,11 +53,11 @@ const Home = () => {
         <section
           key={section.id}
           id={`section-${section.id}`}
-          className={`min-h-screen flex items-center justify-center ${
-            currentSection === index ? "bg-blue-500 text-white" : "bg-black-100"
+          className={`min-h-screen flex items-center justify-center  ${
+            currentSection === index ? "bg-blue-500 text-white" : "bg-blue-500"
           }`}
         >
-          <h1 className="text-3xl">{section.content}</h1>
+          <h1 className="text-3xl" dangerouslySetInnerHTML={{ __html: section.content }} />
         </section>
       ))}
     </div>
