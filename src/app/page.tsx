@@ -8,18 +8,21 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
       <html lang='en'>
    
-       <body className={`${montserrat.className} antialiased`}>
+       <body className={`${montserrat.className}`}>
         <main>
         <Sidebar />
           <h1 className="text-center text-color:blue ">My name is Ricardo and this is my website! welcome!</h1>
 
-          <Image
-        src="/beach.jpg"
-        width={700}
-        height={400}
-        className=" md:block"
-        alt=""
-      />
+        <nav className='text-center text-wrap hover:bg-gray-700' >
+          <ul>
+            <li > 
+              <a href='/MyProjects/index' > 
+                Introduction 
+              </a>
+            </li>
+          </ul>
+        </nav>
+      
 
          </main>
       </body>

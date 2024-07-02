@@ -15,7 +15,7 @@ export default function Sidebar() {
       } bg-gray-800 text-white w-64`}
     >
       <button onClick={toggleSidebar} className="absolute top-4 left-64 bg-gray-700 text-white p-2">
-        {isOpen ? " ≡ " : " Projects "}
+        {isOpen ? " == " : " =="}
       </button>
       {isOpen && (
         <nav className="mt-16">
@@ -26,17 +26,25 @@ export default function Sidebar() {
               </a>
             </li>
             <li>
-              <a href="/dashboard/project1" className="block px-4 py-2 hover:bg-gray-700">
+              {" "}
+              <a href="/MyProjects/index" className="block px-4 py-2 hover:bg-gray-700">
+                {" "}
+                Introduction{" "}
+              </a>
+            </li>
+
+            <li>
+              <a href="/MyProjects/project1" className="block px-4 py-2 hover:bg-gray-700">
                 Project: 1
               </a>
             </li>
             <li>
-              <a href="/dashboard/project2" className="block px-4 py-2 hover:bg-gray-700">
+              <a href="/MyProjects/project2" className="block px-4 py-2 hover:bg-gray-700">
                 Project: 2
               </a>
             </li>
             <li>
-              <a href="/dashboard/project3" className="block px-4 py-2 hover:bg-gray-700">
+              <a href="/MyProjects/project3" className="block px-4 py-2 hover:bg-gray-700">
                 Project: 3
               </a>
             </li>
