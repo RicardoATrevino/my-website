@@ -20,15 +20,34 @@ export default function Sidebar() {
       </button>
       {isOpen && (
         <nav className="mt-16">
-          <ul className="space-y-4">
-            {links.map((link, index) => (
-              <li key={index}>
-                <a href={link.href} className="block px-4 py-2 hover:bg-gray-700">
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <li>
+            <a href="/" className="block px-4 py-2 hover:bg-gray-700">
+              Home
+            </a>
+          </li>
+          <li>
+            {" "}
+            <a href="/MyProjects/intro" className="block px-4 py-2 hover:bg-gray-700">
+              {" "}
+              Introduction{" "}
+            </a>
+          </li>
+
+          <li>
+            <a href="/MyProjects/project1" className="block px-4 py-2 hover:bg-gray-700">
+              Project: 1
+            </a>
+          </li>
+          <li>
+            <a href="/MyProjects/project2" className="block px-4 py-2 hover:bg-gray-700">
+              Project: 2
+            </a>
+          </li>
+          <li>
+            <a href="/MyProjects/project3" className="block px-4 py-2 hover:bg-gray-700">
+              Project: 3
+            </a>
+          </li>
         </nav>
       )}
     </div>

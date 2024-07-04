@@ -4,14 +4,13 @@
 import React, { useState, useEffect } from "react";
 import Sidebar from "@/app/sidebar";
 
-const Home = () => {
+const Page = () => {
   const [currentSection, setCurrentSection] = useState(0);
 
   const sections = [
     {
       id: 1,
-      content:
-        "1/4.<br><br> My name is Ricardo! I also go by Rico, I have been a professional full-stack dev for 1 year (Ruby, JS,Typescript to name a few), I was born and raised around L.A.",
+      content: "1/4.<br><br> ",
     },
     {
       id: 2,
@@ -26,8 +25,7 @@ const Home = () => {
 
     {
       id: 4,
-      content:
-        "4/4.<br><br> Here is my Contact info, I appreciate you taking the time to look through my website!  <br> Phone: 818-935-9670   <br>Email: RicardoATrevino2307@gmail.com ",
+      content: "",
     },
   ];
 
@@ -44,17 +42,16 @@ const Home = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  });
-
+  }, []);
   return (
-    <div>
+    <div className="bg-custom-gradient2 min-h-screen">
       <Sidebar />
       {sections.map((section, index) => (
         <section
           key={section.id}
           id={`section-${section.id}`}
-          className={`min-h-screen flex items-center justify-center  ${
-            currentSection === index ? "bg-blue-500 text-white" : "bg-blue-500"
+          className={`min-h-screen flex items-center justify-center ${
+            currentSection === index ? "bg-black-100" : "bg-black-100"
           }`}
         >
           <h1 className="text-3xl" dangerouslySetInnerHTML={{ __html: section.content }} />
@@ -64,4 +61,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Page;
